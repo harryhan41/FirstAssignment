@@ -33,19 +33,6 @@ public class StringArrayUtilsTest {
         Assert.assertEquals(expected, actual);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Test
     public void testGetSecondElement1() {
         String[] array = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
@@ -193,7 +180,7 @@ public class StringArrayUtilsTest {
         String[] array = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] expected = {"dog", "lazy", "the", "over", "jumps", "fox", "brown", "quick", "the"};
         String[] actual = StringArrayUtils.reverse(array);
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
 
@@ -202,7 +189,7 @@ public class StringArrayUtilsTest {
         String[] array  = {"dog", "lazy", "the", "over", "jumps", "fox", "brown", "quick", "the"};
         String[] expected = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] actual = StringArrayUtils.reverse(array);
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
 
@@ -210,7 +197,7 @@ public class StringArrayUtilsTest {
     public void testReverse3() {
         String[] expected = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] actual = StringArrayUtils.reverse(StringArrayUtils.reverse(expected));
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
 
@@ -337,7 +324,7 @@ public class StringArrayUtilsTest {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "bba", "bba", "bba", "bbb", "bbb"};
         String[] actual = StringArrayUtils.removeConsecutiveDuplicates(array);
         String[] expected = {"aba", "baa", "bab", "bba", "bbb"};
-        Assert.assertEquals(actual, expected);
+        Assert.assertArrayEquals(actual, expected);
     }
 
 
@@ -347,7 +334,7 @@ public class StringArrayUtilsTest {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "zzz", "bba", "bba", "bba", "bbb", "bbb"};
         String[] actual = StringArrayUtils.removeConsecutiveDuplicates(array);
         String[] expected = {"aba", "baa", "bab", "bba", "zzz", "bba", "bbb"};
-        Assert.assertEquals(actual, expected);
+        Assert.assertArrayEquals(actual, expected);
     }
 
 
@@ -356,7 +343,7 @@ public class StringArrayUtilsTest {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "zzz", "bba", "bba", "bba", "aba", "bbb"};
         String[] actual = StringArrayUtils.removeConsecutiveDuplicates(array);
         String[] expected = {"aba", "baa", "bab", "bba", "zzz", "bba", "aba", "bbb"};
-        Assert.assertEquals(actual, expected);
+        Assert.assertArrayEquals(actual, expected);
     }
 
 
@@ -374,7 +361,7 @@ public class StringArrayUtilsTest {
         String[] array = {"a", "a", "a", "b", "c", "c", "a", "a", "d"};
         String[] expected = {"aaa", "b", "cc", "aa", "d"};
         String[] actual = StringArrayUtils.packConsecutiveDuplicates(array);
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
 
@@ -383,7 +370,7 @@ public class StringArrayUtilsTest {
         String[] array = {"t", "t", "q", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e"};
         String[] expected = {"tt", "q", "aaa", "b", "cc", "aa", "d", "eee"};
         String[] actual = StringArrayUtils.packConsecutiveDuplicates(array);
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
 
@@ -393,7 +380,7 @@ public class StringArrayUtilsTest {
         String[] array = {"m", "o", "o", "n", "m", "a", "n"};
         String[] expected = {"m", "oo", "n", "m", "a", "n"};
         String[] actual = StringArrayUtils.packConsecutiveDuplicates(array);
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
 
@@ -408,7 +395,7 @@ public class StringArrayUtilsTest {
         String[] array = {"The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] expected = {"quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] actual = StringArrayUtils.removeValue(array, "The");
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -416,7 +403,7 @@ public class StringArrayUtilsTest {
         String[] array = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] expected = {"the", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] actual = StringArrayUtils.removeValue(array, "quick");
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -424,7 +411,7 @@ public class StringArrayUtilsTest {
         String[] array = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] expected = {"the", "quick", "fox", "jumps", "over", "the", "lazy", "dog"};
         String[] actual = StringArrayUtils.removeValue(array, "brown");
-        Assert.assertEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
 
